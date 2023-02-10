@@ -14,6 +14,7 @@ public class Task2Tests extends Task2 {
             "111",
             "AfdFa",
             "1 ! 2Aa2 !&* 1",
+            "Казак",
             "Ll",
             "Y"
     })

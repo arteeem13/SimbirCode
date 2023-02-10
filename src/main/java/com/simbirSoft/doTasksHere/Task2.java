@@ -20,7 +20,7 @@ public class Task2 {
         for (char c : arraySplitInputStr) if (Character.isLetterOrDigit(c)) numericAndAlphabet.add(c);
         for (int i = 0; i < numericAndAlphabet.size() / 2 + 1; i++)
             if (numericAndAlphabet.isEmpty() ||
-                    numericAndAlphabet.get(i) != numericAndAlphabet.get(numericAndAlphabet.size() - 1 - i)) {
+                    !(numericAndAlphabet.get(i).equals(numericAndAlphabet.get(numericAndAlphabet.size() - 1 - i)))) {
                 result = false;
                 break;
             } else result = true;
