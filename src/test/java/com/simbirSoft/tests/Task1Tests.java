@@ -1,12 +1,13 @@
 package com.simbirSoft.tests;
 
 import com.simbirSoft.doTasksHere.Task1;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-@DisplayName("Юнит-тесты для задачи 1")
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
+@DisplayName("Юнит-тесты для задачи 1 - выборка из списка чисел")
 public class Task1Tests extends Task1 {
 
     @CsvSource(value = {
@@ -19,7 +20,6 @@ public class Task1Tests extends Task1 {
     @ParameterizedTest(name = "Значение на входе: {0}")
     @DisplayName("Позитивные проверки метода task1. ")
     void positiveTests(String value, String result) {
-
-        Assertions.assertThat(Task1.task1(value).equals(result));
+        assertThat(Task1.task1(value)).isEqualTo(result);
     }
 }
