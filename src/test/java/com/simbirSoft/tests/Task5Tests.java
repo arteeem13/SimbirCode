@@ -17,7 +17,7 @@ public class Task5Tests extends Task5 {
             "good; good"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значение на входе: {0}. На выходе: {1}")
-    @DisplayName("Позитивные проверки метода 5. ")
+    @DisplayName("Позитивные проверки метода task5. ")
     void positiveTests(String value, String result) {
         assertThat(Task5.task5(value)).isEqualTo(result);
     }

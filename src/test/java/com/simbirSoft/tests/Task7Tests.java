@@ -18,7 +18,7 @@ public class Task7Tests extends Task7 {
             "1; 1; 1; 1"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значения на входе: {0}; {1}; {2}. На выходе: {3}")
-    @DisplayName("Проверки метода 7. ")
+    @DisplayName("Проверки метода task7. ")
     void positiveTests(String value1, String value2, String value3, String result) {
         assertThat(Task7.task7(value1, value2, value3)).isEqualTo(result);
     }
