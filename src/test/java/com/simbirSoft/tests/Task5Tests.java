@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 5 - выборка из списка чисел")
+@DisplayName("Юнит-тесты для задачи 5 - удаление дубликатов")
 public class Task5Tests extends Task5 {
 
     @CsvSource(value = {

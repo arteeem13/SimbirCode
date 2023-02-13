@@ -20,7 +20,6 @@ public class Task5 {
     // Писать основную логику здесь
     protected static String task5(String inputStr) {
         List<String> listInputStr = new ArrayList<>(List.of(inputStr.split(", ")));
-        System.out.println(listInputStr);
         if (listInputStr.size() == 1) return inputStr;
         else {
             for (int i = 0; i < listInputStr.size(); i++)
