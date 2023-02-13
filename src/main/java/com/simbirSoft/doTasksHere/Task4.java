@@ -26,9 +26,7 @@ public class Task4 {
         if (inputValue == 0) result = String.valueOf(factorial);
         else if (inputValue < 0) result = error_result;
         else {
-            for (int i = 1; i <= inputValue; i++) {
-                factorial = factorial.multiply(BigInteger.valueOf(i));
-            }
+            for (int i = 1; i <= inputValue; i++) factorial = factorial.multiply(BigInteger.valueOf(i));
             result = String.valueOf(factorial);
         }
         return result;
