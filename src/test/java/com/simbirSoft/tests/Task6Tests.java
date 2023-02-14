@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 6 - поиск повторов в трех массивах")
+@DisplayName("Юнит-тесты для задачи 6 - выборка из двух массивов и заполнение третьего")
 public class Task6Tests extends Task6 {
 
     @CsvSource(value = {
