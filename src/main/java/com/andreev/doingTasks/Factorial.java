@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -9,16 +9,16 @@ import static java.lang.Integer.parseInt;
  * Написать функцию, реализующую нахождение факториала рекурсивно
  */
 
-public class Task4 {
+public class Factorial {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr = new Scanner(System.in).nextLine();
-        System.out.println(task4(inputStr));
+        System.out.println(getFactorial(inputStr));
     }
 
     // Писать основную логику здесь
-    protected static String task4(String inputStr) {
+    protected static String getFactorial(String inputStr) {
         String result;
         BigInteger factorial = BigInteger.valueOf(1);
         String error_result = "Error input value!";

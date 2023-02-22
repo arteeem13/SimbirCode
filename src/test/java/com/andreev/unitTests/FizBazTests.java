@@ -1,14 +1,14 @@
-package com.simbirSoft.tests;
+package com.andreev.unitTests;
 
-import com.simbirSoft.doTasksHere.Task1;
+import com.andreev.doingTasks.FizBaz;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 1 - выборка из списка чисел")
-public class Task1Tests extends Task1 {
+@DisplayName("Юнит-тесты для задачи FizBaz - выборка из списка чисел")
+public class FizBazTests extends FizBaz {
 
     @CsvSource(value = {
             "4, 16; 4, баз, физ, 7, 8, физ, баз, 11, физ, 13, 14, физбаз, 16",
@@ -18,8 +18,8 @@ public class Task1Tests extends Task1 {
             "101, 101; 101"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значение на входе: {0}")
-    @DisplayName("Позитивные проверки метода task1. ")
+    @DisplayName("Позитивные проверки метода getFizBaz. ")
     void positiveTests(String value, String result) {
-        assertThat(Task1.task1(value)).isEqualTo(result);
+        assertThat(FizBaz.getFizBaz(value)).isEqualTo(result);
     }
 }

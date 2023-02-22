@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,16 +15,16 @@ import static java.lang.Integer.parseInt;
  *  в остальных случаях - выводится само число.
  */
 
-public class Task1 {
+public class FizBaz {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr = new Scanner(System.in).nextLine();
-        System.out.println(task1(inputStr));
+        System.out.println(getFizBaz(inputStr));
     }
 
     // Писать основную логику здесь
-    protected static String task1(String inputStr) {
+    protected static String getFizBaz(String inputStr) {
         String result = "";
         List<String> listSplitInputStr = List.of(inputStr.split(", "));
         List<String> listOutputValues = new ArrayList<>();

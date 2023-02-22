@@ -1,14 +1,14 @@
-package com.simbirSoft.tests;
+package com.andreev.unitTests;
 
-import com.simbirSoft.doTasksHere.Task3;
+import com.andreev.doingTasks.GetMaxValue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 3 - найти наибольшее число из списка")
-public class Task3Tests extends Task3 {
+@DisplayName("Юнит-тесты для задачи - найти наибольшее число из списка")
+public class GetMaxValueTests extends GetMaxValue {
 
     @CsvSource(value = {
             "1; 1",
@@ -18,8 +18,8 @@ public class Task3Tests extends Task3 {
             "-500, -501; -500"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значения на входе: {0}. На выходе: {1}")
-    @DisplayName("Позитивные проверки метода task3. ")
+    @DisplayName("Позитивные проверки метода getMaxValue. ")
     void positiveTests(String value, Integer result) {
-        assertThat(Task3.task3(value)).isEqualTo(result);
+        assertThat(GetMaxValue.getMaxValue(value)).isEqualTo(result);
     }
 }

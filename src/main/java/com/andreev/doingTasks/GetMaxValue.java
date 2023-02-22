@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,16 +10,16 @@ import static java.lang.Integer.parseInt;
  * (без использования метода sort)
  */
 
-public class Task3 {
+public class GetMaxValue {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr = new Scanner(System.in).nextLine();
-        System.out.println(task3(inputStr));
+        System.out.println(getMaxValue(inputStr));
     }
 
     // Писать основную логику здесь
-    protected static Integer task3(String inputStr) {
+    protected static Integer getMaxValue(String inputStr) {
         List<String> listSplitInputStr = List.of(inputStr.split(", "));
         int maxValue = parseInt(listSplitInputStr.get(0));
         for (int i = 1; i < listSplitInputStr.size(); i++) {

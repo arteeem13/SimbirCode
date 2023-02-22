@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,18 +14,18 @@ import static java.lang.Integer.parseInt;
  * которые присутствуют во всех трех массивах. Если повторяющихся чисел нет, отдать сообщение "No repeats"
  */
 
-public class Task7 {
+public class SelectedFromThreeArrays {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr1 = new Scanner(System.in).nextLine();
         String inputStr2 = new Scanner(System.in).nextLine();
         String inputStr3 = new Scanner(System.in).nextLine();
-        System.out.println(task7(inputStr1, inputStr2, inputStr3));
+        System.out.println(getSelectedFromThreeArrays(inputStr1, inputStr2, inputStr3));
     }
 
     // Писать основную логику здесь
-    protected static String task7(String inputStr1, String inputStr2, String inputStr3) {
+    protected static String getSelectedFromThreeArrays(String inputStr1, String inputStr2, String inputStr3) {
         int[] inputValues1 = strToArray(inputStr1);
         int[] inputValues2 = strToArray(inputStr2);
         int[] inputValues3 = strToArray(inputStr3);

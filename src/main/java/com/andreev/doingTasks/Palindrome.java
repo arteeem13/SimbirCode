@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,19 +7,19 @@ import java.util.Scanner;
 /**
  * Написать функцию, которая на вход принимает строку, и возвращает true, если строка является палиндромом,
  * false, если не палиндром.
- * В main реализовать ввод строки с консоли, вызов метода task2 и вывод в консоль результат.
+ * В main реализовать ввод строки с консоли, вызов метода getPalindrome и вывод в консоль результат.
  */
 
-public class Task2 {
+public class Palindrome {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr = new Scanner(System.in).nextLine();
-        System.out.println(task2(inputStr));
+        System.out.println(getPalindrome(inputStr));
     }
 
     // Писать основную логику здесь
-    protected static Boolean task2(String inputStr) {
+    protected static Boolean getPalindrome(String inputStr) {
         boolean result = false;
         char[] arraySplitInputStr = inputStr.toLowerCase().toCharArray();
         List<Character> numericAndAlphabet = new ArrayList<>();

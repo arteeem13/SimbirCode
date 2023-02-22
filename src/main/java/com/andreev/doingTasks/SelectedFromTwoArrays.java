@@ -1,4 +1,4 @@
-package com.simbirSoft.doTasksHere;
+package com.andreev.doingTasks;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +14,7 @@ import static java.lang.Integer.parseInt;
  * Числа в выходной строке разделены запятой и пробелом
  */
 
-public class Task6 {
+public class SelectedFromTwoArrays {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
@@ -22,11 +22,11 @@ public class Task6 {
         String inputStr1 = new Scanner(System.in).nextLine();
         System.out.println("B: ");
         String inputStr2 = new Scanner(System.in).nextLine();
-        System.out.println(task6(inputStr1, inputStr2));
+        System.out.println(getSelectedFromTwoArrays(inputStr1, inputStr2));
     }
 
     // Писать основную логику здесь
-    protected static String task6(String inputStr1, String inputStr2) {
+    protected static String getSelectedFromTwoArrays(String inputStr1, String inputStr2) {
         int[] a = strToArray(inputStr1);
         int[] b = strToArray(inputStr2);
         int[] c = new int[b.length];

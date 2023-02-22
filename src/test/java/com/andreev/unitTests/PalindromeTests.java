@@ -1,14 +1,14 @@
-package com.simbirSoft.tests;
+package com.andreev.unitTests;
 
-import com.simbirSoft.doTasksHere.Task2;
+import com.andreev.doingTasks.Palindrome;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 2 - определение полиндромности")
-public class Task2Tests extends Task2 {
+@DisplayName("Юнит-тесты для задачи - определение полиндромности")
+public class PalindromeTests extends Palindrome {
 
     @ValueSource(strings = {
             "111",
@@ -19,9 +19,9 @@ public class Task2Tests extends Task2 {
             "Y"
     })
     @ParameterizedTest(name = "Значение на входе: {0}")
-    @DisplayName("Проверки метода task2 с результатом true. ")
+    @DisplayName("Проверки метода getPalindrome с результатом true. ")
     void trueResultTests(String value) {
-        assertThat(Task2.task2(value)).isTrue();
+        assertThat(Palindrome.getPalindrome(value)).isTrue();
     }
 
     @ValueSource(strings = {
@@ -33,8 +33,8 @@ public class Task2Tests extends Task2 {
             "@@"
     })
     @ParameterizedTest(name = "Значение на входе: {0}")
-    @DisplayName("Проверки метода task2 с результатом false. ")
+    @DisplayName("Проверки метода getPalindrome с результатом false. ")
     void falseResultTests(String value) {
-        assertThat(Task2.task2(value)).isFalse();
+        assertThat(Palindrome.getPalindrome(value)).isFalse();
     }
 }

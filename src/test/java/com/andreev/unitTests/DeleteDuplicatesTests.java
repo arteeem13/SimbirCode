@@ -1,14 +1,14 @@
-package com.simbirSoft.tests;
+package com.andreev.unitTests;
 
-import com.simbirSoft.doTasksHere.Task5;
+import com.andreev.doingTasks.DeleteDuplicates;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DisplayName("Юнит-тесты для задачи 5 - удаление дубликатов")
-public class Task5Tests extends Task5 {
+@DisplayName("Юнит-тесты для задачи - удаление дубликатов")
+public class DeleteDuplicatesTests extends DeleteDuplicates {
 
     @CsvSource(value = {
             "Кошка, Кошка, Собака, Медведь; Кошка, Собака, Медведь",
@@ -17,8 +17,8 @@ public class Task5Tests extends Task5 {
             "good; good"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значение на входе: {0}. На выходе: {1}")
-    @DisplayName("Позитивные проверки метода task5. ")
+    @DisplayName("Позитивные проверки метода deleteDuplicates. ")
     void positiveTests(String value, String result) {
-        assertThat(Task5.task5(value)).isEqualTo(result);
+        assertThat(DeleteDuplicates.deleteDuplicates(value)).isEqualTo(result);
     }
 }

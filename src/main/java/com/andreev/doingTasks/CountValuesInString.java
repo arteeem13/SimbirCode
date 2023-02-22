@@ -1,17 +1,17 @@
-package com.simbirSoft.exampleExecution;
+package com.andreev.doingTasks;
 
 import java.util.Scanner;
 
-public class Task0 {
+public class CountValuesInString {
 
     // Реализовать консольный ввод - вывод, выполнение метода здесь
     public static void main(String[] args) {
         String inputStr = new Scanner(System.in).nextLine();
-        System.out.println(task0(inputStr));
+        System.out.println(getCountValues(inputStr));
     }
 
     // Писать основную логику здесь
-    protected static Integer task0(String inputStr) {
+    protected static Integer getCountValues(String inputStr) {
         int result = 0;
         char[] arraySplitInputStr = inputStr.toCharArray();
         while (result < arraySplitInputStr.length) result++;
