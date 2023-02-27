@@ -1,6 +1,6 @@
 package com.andreev.unitTests;
 
-import com.andreev.doingTasks.BubbleSort;
+import com.andreev.doingTasks.SelectionSort;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @DisplayName("Юнит-тесты для задачи - реализовать сортировку пузырьком")
-public class BubbleSortTests {
+public class SelectionSortTests {
 
     @CsvSource(value = {
             "0, 1, 2; 0, 1, 2",
@@ -19,8 +19,8 @@ public class BubbleSortTests {
             "2, -10, 9, 11, 19; -10, 2, 9, 11, 19"
     }, delimiter = ';')
     @ParameterizedTest(name = "Значения на входе: {0}. На выходе: {1}")
-    @DisplayName("Позитивные проверки метода getBubbleSort. ")
+    @DisplayName("Позитивные проверки метода getSelectionSort. ")
     void positiveTests(String value, String result) {
-        assertThat(BubbleSort.getBubbleSort(value)).isEqualTo(result);
+        assertThat(SelectionSort.getSelectionSort(value)).isEqualTo(result);
     }
 }

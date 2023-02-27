@@ -4,13 +4,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Integer.max;
-import static java.lang.Integer.parseInt;
 
 /**
  * Написать функцию, которая на вход принимает строку c целыми числами через пробел и запятую и сортирует
  * методом пузырька
  * В main реализовать ввод строки с консоли, вызов метода getSelectionSort и вывод в консоль результат.
- *
+ * <p>
  * Принцип действий: проходим по массиву в поисках максимального элемента. Найденный максимум меняем местами с
  * последним элементом. Неотсортированная часть массива уменьшилась на один элемент (не включает последний элемент,
  * куда мы переставили найденный максимум). К этой неотсортированной части применяем те же действия — находим максимум
@@ -30,23 +29,24 @@ public class SelectionSort {
 
         String[] splitStr = inputStr.split(", ");
         int[] unsortedIntArray = Arrays.stream(splitStr).mapToInt(Integer::parseInt).toArray();
-        int[] sortedIntArray = new int[splitStr.length];
         int iterations = splitStr.length - 1;
 
         do {
-            for (int i = 0; i < iterations; i++) {
-                int maxValue = max(unsortedIntArray[i], unsortedIntArray[i + 1]);
-                sortedIntArray[sortedIntArray.length - 1] = maxValue;
+            int maxValue = unsortedIntArray[0];
+            int indexMaxValue = 0;
+            for (int i = 1; i <= iterations; i++) {
+                if(unsortedIntArray[i] > maxValue) {
+                    maxValue = unsortedIntArray[i];
+                    indexMaxValue = i;
+                }
             }
+            unsortedIntArray[indexMaxValue] = unsortedIntArray[iterations];
+            unsortedIntArray[iterations] = maxValue;
             iterations--;
-        } while (iterations != 0);
+        } while (iterations != -1);
 
-
-        StringBuilder sortedStr = new StringBuilder(sortedIntArray[0]);
-        for (int i = 1; i < sortedIntArray.length; i++) {
-            sortedStr.append(", ").append(sortedIntArray[i]);
-        }
-
+        StringBuilder sortedStr = new StringBuilder(String.valueOf(unsortedIntArray[0]));
+        for (int i = 1; i < unsortedIntArray.length; i++) sortedStr.append(", ").append(unsortedIntArray[i]);
         return sortedStr.toString();
     }
 }
