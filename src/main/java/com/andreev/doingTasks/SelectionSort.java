@@ -41,7 +41,7 @@ public class SelectionSort {
             unsortedIntArray[indexMaxValue] = unsortedIntArray[iterations];
             unsortedIntArray[iterations] = maxValue;
             iterations--;
-        } while (iterations != -1);
+        } while (iterations >= 0);
 
         StringBuilder sortedStr = new StringBuilder(String.valueOf(unsortedIntArray[0]));
         for (int i = 1; i < unsortedIntArray.length; i++) sortedStr.append(", ").append(unsortedIntArray[i]);
