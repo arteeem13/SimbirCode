@@ -3,8 +3,6 @@ package com.andreev.doingTasks;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.lang.Integer.max;
-
 /**
  * Написать функцию, которая на вход принимает строку c целыми числами через пробел и запятую и сортирует
  * методом пузырька
@@ -35,7 +33,7 @@ public class SelectionSort {
             int maxValue = unsortedIntArray[0];
             int indexMaxValue = 0;
             for (int i = 1; i <= iterations; i++) {
-                if(unsortedIntArray[i] > maxValue) {
+                if (unsortedIntArray[i] > maxValue) {
                     maxValue = unsortedIntArray[i];
                     indexMaxValue = i;
                 }
