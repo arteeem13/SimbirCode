@@ -1,5 +1,6 @@
 package com.andreev.doingTasks;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -29,9 +30,10 @@ public class BubbleSort {
 
         String[] splitStr = inputStr.split(", ");
         int sortedFlag;
+        int iterations = splitStr.length - 1;
         do {
             sortedFlag = 0;
-            for (int i = 0; i < splitStr.length - 1; i++) {
+            for (int i = 0; i < iterations; i++) {
                 if (parseInt(splitStr[i]) > parseInt(splitStr[i + 1])) {
                     String max = splitStr[i];
                     splitStr[i] = splitStr[i + 1];
@@ -39,6 +41,7 @@ public class BubbleSort {
                     sortedFlag++;
                 }
             }
+            iterations--;
         } while (sortedFlag != 0);
 
         StringBuilder sortedStr = new StringBuilder(splitStr[0]);
